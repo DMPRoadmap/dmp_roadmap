@@ -9,7 +9,7 @@ Add this line to your application's Gemfile:
 ```ruby
 group :development, :test do
 
-  gem 'rubocop-dmp_roadmap', require: false
+  gem 'rubocop-dmp_roadmap'
 
 end
 ```
@@ -28,9 +28,6 @@ If you don't already have a `.rubocop.yml` file, create one in your repo's root 
 
 ``` yml
 # .rubocop.yml
-
-require: rubocop/dmp_roadmap
-
 inherit_gem:
   rubocop-dmp_roadmap:
     - config/default.yml
