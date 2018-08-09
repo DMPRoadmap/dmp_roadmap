@@ -1,3 +1,5 @@
+# Enforce this in the main code but ignore it in specs since the Rspec core methods
+# are defined as potentially ambiguous blocks
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - 'spec/**/*'

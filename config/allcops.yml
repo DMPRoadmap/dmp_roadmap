@@ -1,9 +1,14 @@
+# Global configuration for Rubocop
+#
 AllCops:
+  # Cache the results for faster processing
   UseCache: true
+  # Show the name of the cops being voilated in the feedback
   DisplayCopNames: true
   DisplayStyleGuide: true
-  TargetRubyVersion: 2.5
-  # Include:
+  # We're using Ruby 2.4 right now. So force that version or higher.
+  TargetRubyVersion: 2.4
+  # Don't check these files. So many of them are boilerplate code with violations.
   Exclude:
     - 'bin/*'
     - 'lib/tasks/**/*'

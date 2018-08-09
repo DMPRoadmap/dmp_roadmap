@@ -1,18 +1,27 @@
+# Ignore this cop. The Rubocop default is sensible, but the rubocop-rails gem modifies
+# this to position else keywords awkwardly.
 Layout/ElseAlignment:
   Enabled: false
 
+# Ignore this cop. The Rubocop default is sensible, but the rubocop-rails gem modifies
+# this to position end keywords awkwardly.
 Layout/EndAlignment:
   Enabled: false
 
-Layout/EmptyLinesAroundClassBody:
-  Enabled: false
-
-Layout/EmptyLinesAroundModuleBody:
-  Enabled: false
-
+# Force no empty lines at the start or end of a block's body. Ignore specs, since this
+# improves readability within the RSpec blocks.
 Layout/EmptyLinesAroundBlockBody:
   Exclude:
     - 'spec/**/*'
 
-Layout/IndentationWidth:
-  Enabled: false
+# Force a single blank line around a class's body. Adding this whitespace makes code
+# a bit easier to read.
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+  EnforcedStyle: empty_lines
+
+# Force a single blank line around a module's body. Adding this whitespace makes code
+# a bit easier to read.
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: true
+  EnforcedStyle: empty_lines
