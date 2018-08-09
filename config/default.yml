@@ -1,0 +1,13 @@
+inherit_gem:
+  rubocop-rails:
+    - config/rails.yml
+
+inherit_from:
+  - ./allcops.yml
+  - ./lint.yml
+  - ./style.yml
+  - ./metrics.yml
+  - ./layout.yml
+
+Rails:
+  Enabled: true
