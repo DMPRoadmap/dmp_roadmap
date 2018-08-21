@@ -1,12 +1,8 @@
 # Ignore this cop. The Rubocop default is sensible, but the rubocop-rails gem modifies
-# this to position else keywords awkwardly.
-Layout/ElseAlignment:
-  Enabled: false
-
-# Ignore this cop. The Rubocop default is sensible, but the rubocop-rails gem modifies
 # this to position end keywords awkwardly.
 Layout/EndAlignment:
-  Enabled: false
+  Enabled: true
+  EnforcedStyleAlignWith: keyword
 
 # Force no empty lines at the start or end of a block's body. Ignore specs, since this
 # improves readability within the RSpec blocks.
@@ -25,3 +21,20 @@ Layout/EmptyLinesAroundClassBody:
 Layout/EmptyLinesAroundModuleBody:
   Enabled: true
   EnforcedStyle: empty_lines
+
+Layout/IndentationWidth:
+  Description: 'Use 2 spaces for indentation.'
+  StyleGuide: '#spaces-indentation'
+  Enabled: true
+
+# The difference between `rails` and `normal` is that the `rails` style
+# prescribes that in classes and modules the `protected` and `private`
+# modifier keywords shall be indented the same as public methods and that
+# protected and private members shall be indented one step more than the
+# modifiers. Other than that, both styles mean that entities on the same
+# logical depth shall have the same indentation.
+Layout/IndentationConsistency:
+  Description: 'Keep indentation straight.'
+  StyleGuide: '#spaces-indentation'
+  Enabled: true
+  EnforcedStyle: normal
