@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-dmp_roadmap (1.1.1)
+    rubocop-dmp_roadmap (1.1.2)
       rubocop (>= 0.58.2)
       rubocop-rails_config (>= 0.2.2)
       rubocop-rspec (>= 1.27.0)
